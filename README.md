@@ -68,7 +68,7 @@ Usada para especificar um relacionamento de banco de dados um-para-um.
 Usada para especificar um relacionamento de banco de dados muitos-para-um.
 
 <strong>cascade</strong>
-Realizar operações em cascata só faz sentido em relacionamentos Pai - Filho.
+Realizar operações em cascata só faz sentido em relacionamento Pai - Filho.
 
 <strong>mappedBy</strong>
 Indica qual é o lado inverso ou não dominante da relação.
@@ -84,7 +84,7 @@ Indica qual é o lado inverso ou não dominante da relação.
 <h2> 🤝 Contribuindo </h2>
 
 Este repositório foi criado para fins de estudo, então contribua com ele.
-Se te ajudei de alguma forma, ficarei feliz em saber. E caso você conheça alguém que se identidique com o conteúdo, não deixe de compatilhar.
+Se lhe ajudei de alguma forma, ficarei feliz em saber. E caso conheça alguém que se identidique com o conteúdo, não deixe de compatilhar.
 
 Se possível:
 
@@ -94,7 +94,7 @@ Se possível:
 
 ------------
 
-Disponibilizado com ♥ por [cami-la](https://www.linkedin.com/in/cami-la/ "cami-la").
+Feito com ♥ por [Thonwelling](https://www.linkedin.com/in/thonwelling/ "THONWELLING").
 
 
 
