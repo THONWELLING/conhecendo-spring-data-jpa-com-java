@@ -1,6 +1,7 @@
 package com.thonwelling.academiadigital.controller;
 
 import com.thonwelling.academiadigital.entity.Aluno;
+import com.thonwelling.academiadigital.entity.AvaliacaoFisica;
 import com.thonwelling.academiadigital.entity.dtos.AlunoDto;
 import com.thonwelling.academiadigital.service.impl.AlunoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,10 @@ public class AlunoController {
   @PostMapping
   public Aluno criarAluno(@RequestBody AlunoDto dto){
     return service.create(dto);
+  }
+  @GetMapping("/avaliacoes/{id}")
+  public List<AvaliacaoFisica> listarTodasAvaliacoesFisicas(@PathVariable Long id){
+    return service.listarTodasAvaliacoesFisicas(id);
   }
 
   @GetMapping

@@ -1,6 +1,7 @@
 package com.thonwelling.academiadigital.service.impl;
 
 import com.thonwelling.academiadigital.entity.Aluno;
+import com.thonwelling.academiadigital.entity.AvaliacaoFisica;
 import com.thonwelling.academiadigital.entity.dtos.AlunoDto;
 import com.thonwelling.academiadigital.entity.dtos.AlunoUpdateDto;
 import com.thonwelling.academiadigital.repository.AlunoRepository;
@@ -43,5 +44,11 @@ public class AlunoServiceImpl implements IAlunoService {
   @Override
   public void delete(Long id) {
 
+  }
+
+  @Override
+  public List<AvaliacaoFisica> listarTodasAvaliacoesFisicas(Long id) {
+    Aluno aluno = repository.findById(id).get();
+    return aluno.getAvaliacoes();
   }
 }

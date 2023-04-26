@@ -1,6 +1,7 @@
 package com.thonwelling.academiadigital.service;
 
 import com.thonwelling.academiadigital.entity.Aluno;
+import com.thonwelling.academiadigital.entity.AvaliacaoFisica;
 import com.thonwelling.academiadigital.entity.dtos.AlunoDto;
 import com.thonwelling.academiadigital.entity.dtos.AlunoUpdateDto;
 
@@ -17,4 +18,6 @@ public interface IAlunoService {
   Aluno update(Long id, AlunoUpdateDto formUpdate);
 
   void delete(Long id);
+
+  List<AvaliacaoFisica> listarTodasAvaliacoesFisicas(Long id);
 }
