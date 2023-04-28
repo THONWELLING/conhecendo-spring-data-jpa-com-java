@@ -37,7 +37,7 @@ public class MatriculaServiceImpl implements IMatriculaService {
   }
 
   @Override
-  public List<MatriculaDto> getAll(String bairro) {
+  public List<MatriculaDto> matriculasPorBairro(String bairro) {
     List<Matricula> matriculas;
     if(bairro == null){
       matriculas = repository.findAll();

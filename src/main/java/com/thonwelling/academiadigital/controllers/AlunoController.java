@@ -21,6 +21,12 @@ public class AlunoController {
     return service.getAll();
   }
 
+  @GetMapping
+  public List<AlunoDto> getPorDtaNascimento(@RequestParam(value = "dataDeNascimento", required = false)
+                            String dataDeNacimento){
+    return service.getPorDtaNascimento(dataDeNacimento);
+  }
+
   @PostMapping
   public AlunoDto criarAluno(@RequestBody AlunoDto dto){
     return service.create(dto);

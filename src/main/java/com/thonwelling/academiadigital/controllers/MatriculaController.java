@@ -20,7 +20,7 @@ public class MatriculaController {
   }
 
   @GetMapping
-  public List<MatriculaDto> listarTodasAsMatriculas(@RequestParam(value = "bairro", required = false) String bairro){
-    return service.getAll(bairro);
+  public List<MatriculaDto> listarMatriculasPorBairro(@RequestParam(value = "bairro", required = false) String bairro){
+    return service.matriculasPorBairro(bairro);
   }
 }

@@ -1,4 +1,4 @@
-package com.thonwelling.academiadigital.entity.dtos;
+package com.thonwelling.academiadigital.dtos;
 
 import lombok.Getter;
 import lombok.Setter;

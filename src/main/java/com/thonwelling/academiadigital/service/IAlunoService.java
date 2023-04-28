@@ -18,4 +18,6 @@ public interface IAlunoService {
   void delete(Long id);
 
   List<AvaliacaoFisica> listarTodasAvaliacoesFisicas(Long id);
+
+  List<AlunoDto> getPorDtaNascimento(String dataDeNacimento);
 }

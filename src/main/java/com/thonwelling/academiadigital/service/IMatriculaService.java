@@ -8,7 +8,7 @@ public interface IMatriculaService {
   MatriculaDto create(MatriculaDto form);
   MatriculaDto get(Long id);
 
-  List<MatriculaDto> getAll(String bairro);
+  List<MatriculaDto> matriculasPorBairro(String bairro);
 
   void delete(Long id);
 

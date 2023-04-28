@@ -15,7 +15,6 @@
 <h2> 🚦 Guia </h2>
 
 <ol>
-    <li> Apresentação do Projeto Base </li>
     <li> Configuração do banco de dados (SGBD <em>PostgreSQL</em>)</li>
     <li> Aplicando as <em>annotations</em></li>
     <li>Execução do fluxo back-end: <em>Controller - Service - Repository</em></li>
@@ -27,12 +26,13 @@
 
 <ul>
     <li>IDE IntelliJ</li>
-    <li>Java 11</li>
+    <li>Java 17</li>
     <li>Maven</li>
     <li><strong>Spring Web</strong></li>
     <li><strong>Spring Data JPA</strong></li>
     <li><strong>PostgreSQL Driver</strong></li>
     <li><strong>Hibernate Validator</strong></li>
+    <li><strong>ModelMapper</strong></li>
     <li>Lombok</li>
     <li>Postman</li>
 </ul>
@@ -94,7 +94,7 @@ Se possível:
 
 ------------
 
-Feito com ♥ por [Thonwelling](https://www.linkedin.com/in/thonwelling/ "THONWELLING").
+Feito por [Thonwelling](https://www.linkedin.com/in/thonwelling/ "THONWELLING").
 
 
 

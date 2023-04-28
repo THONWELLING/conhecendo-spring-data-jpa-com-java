@@ -1,4 +1,4 @@
-package com.thonwelling.academiadigital.entity.dtos;
+package com.thonwelling.academiadigital.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,8 +9,6 @@ import java.time.LocalDate;
 public class AlunoUpdateDto {
 
   private String nome;
-
   private String bairro;
-
   private LocalDate dataDeNascimento;
 }
