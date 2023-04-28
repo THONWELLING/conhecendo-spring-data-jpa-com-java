@@ -1,8 +1,8 @@
 package com.thonwelling.academiadigital.service;
 
 import com.thonwelling.academiadigital.entity.AvaliacaoFisica;
-import com.thonwelling.academiadigital.entity.dtos.AvaliacaoFisicaDto;
-import com.thonwelling.academiadigital.entity.dtos.AvaliacaoFisicaUpdateDto;
+import com.thonwelling.academiadigital.dtos.AvaliacaoFisicaDto;
+import com.thonwelling.academiadigital.dtos.AvaliacaoFisicaUpdateDto;
 
 import java.util.List;
 

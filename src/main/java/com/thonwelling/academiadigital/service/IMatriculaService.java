@@ -1,15 +1,14 @@
 package com.thonwelling.academiadigital.service;
 
-import com.thonwelling.academiadigital.entity.Matricula;
-import com.thonwelling.academiadigital.entity.dtos.MatriculaDto;
+import com.thonwelling.academiadigital.dtos.MatriculaDto;
 
 import java.util.List;
 
 public interface IMatriculaService {
-  Matricula create(MatriculaDto form);
-  Matricula get(Long id);
+  MatriculaDto create(MatriculaDto form);
+  MatriculaDto get(Long id);
 
-  List<Matricula> getAll();
+  List<MatriculaDto> getAll(String bairro);
 
   void delete(Long id);
 

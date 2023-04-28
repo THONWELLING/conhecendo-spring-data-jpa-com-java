@@ -2,8 +2,8 @@ package com.thonwelling.academiadigital.service.impl;
 
 import com.thonwelling.academiadigital.entity.Aluno;
 import com.thonwelling.academiadigital.entity.AvaliacaoFisica;
-import com.thonwelling.academiadigital.entity.dtos.AvaliacaoFisicaDto;
-import com.thonwelling.academiadigital.entity.dtos.AvaliacaoFisicaUpdateDto;
+import com.thonwelling.academiadigital.dtos.AvaliacaoFisicaDto;
+import com.thonwelling.academiadigital.dtos.AvaliacaoFisicaUpdateDto;
 import com.thonwelling.academiadigital.repository.AlunoRepository;
 import com.thonwelling.academiadigital.repository.AvaliacaoFisicaRepository;
 import com.thonwelling.academiadigital.service.IAvaliacaoFisicaService;

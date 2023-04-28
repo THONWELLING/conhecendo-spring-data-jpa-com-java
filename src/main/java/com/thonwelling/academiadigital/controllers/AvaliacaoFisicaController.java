@@ -1,7 +1,7 @@
-package com.thonwelling.academiadigital.controller;
+package com.thonwelling.academiadigital.controllers;
 
 import com.thonwelling.academiadigital.entity.AvaliacaoFisica;
-import com.thonwelling.academiadigital.entity.dtos.AvaliacaoFisicaDto;
+import com.thonwelling.academiadigital.dtos.AvaliacaoFisicaDto;
 import com.thonwelling.academiadigital.service.impl.AvaliacaoFisicaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,4 +20,5 @@ public class AvaliacaoFisicaController {
   public AvaliacaoFisica criarAvaliacaoFisica(@RequestBody AvaliacaoFisicaDto avaliacaoFisicaDto) {
   return service.create(avaliacaoFisicaDto);
   }
+
 }

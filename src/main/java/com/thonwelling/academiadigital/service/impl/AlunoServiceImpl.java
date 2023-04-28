@@ -2,8 +2,8 @@ package com.thonwelling.academiadigital.service.impl;
 
 import com.thonwelling.academiadigital.entity.Aluno;
 import com.thonwelling.academiadigital.entity.AvaliacaoFisica;
-import com.thonwelling.academiadigital.entity.dtos.AlunoDto;
-import com.thonwelling.academiadigital.entity.dtos.AlunoUpdateDto;
+import com.thonwelling.academiadigital.dtos.AlunoDto;
+import com.thonwelling.academiadigital.mapper.ModelMapperMapping;
 import com.thonwelling.academiadigital.repository.AlunoRepository;
 import com.thonwelling.academiadigital.service.IAlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,33 +17,37 @@ public class AlunoServiceImpl implements IAlunoService {
   AlunoRepository repository;
 
   @Override
-  public Aluno create(AlunoDto alunoDto) {
-    Aluno aluno = new Aluno();
-    aluno.setNome(alunoDto.getNome());
-    aluno.setCpf(alunoDto.getCpf());
-    aluno.setBairro(alunoDto.getBairro());
-    aluno.setDataDeNascimento(alunoDto.getDataDeNascimento());
-    return repository.save(aluno);
+  public AlunoDto create(AlunoDto aluno) {
+    var entity = ModelMapperMapping.parseObject(aluno, Aluno.class);
+    return ModelMapperMapping.parseObject(repository.save(entity), AlunoDto.class);
   }
 
   @Override
-  public Aluno get(Long id) {
-    return null;
+  public AlunoDto get(Long id) {
+    var entity = repository.findById(id).orElseThrow(() -> new RuntimeException("Nenhum Dado Encontrado Para Este Id"));
+    return ModelMapperMapping.parseObject(entity, AlunoDto.class);
   }
 
   @Override
-  public List<Aluno> getAll() {
-    return repository.findAll();
+  public List<AlunoDto> getAll() {
+    return ModelMapperMapping.parseListObjects(repository.findAll(), AlunoDto.class);
   }
 
   @Override
-  public Aluno update(Long id, AlunoUpdateDto updateDto) {
-    return null;
+  public AlunoDto update(AlunoDto aluno) {
+    var entity = repository.findById(aluno.getId()).orElseThrow(() -> new RuntimeException("Nenhum Dado Encontrado Para Este Id"));
+
+    entity.setNome(aluno.getNome());
+    entity.setCpf(aluno.getCpf());
+    entity.setBairro(aluno.getBairro());
+    entity.setDataDeNascimento(aluno.getDataDeNascimento());
+    return ModelMapperMapping.parseObject(repository.save(entity), AlunoDto.class);
   }
 
   @Override
   public void delete(Long id) {
-
+    var entity = repository.findById(id).orElseThrow(() -> new RuntimeException("Nenhum Dado Encontrado Para Este Id"));
+    repository.delete(entity);
   }
 
   @Override

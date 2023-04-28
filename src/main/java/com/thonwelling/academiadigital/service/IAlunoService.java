@@ -1,21 +1,19 @@
 package com.thonwelling.academiadigital.service;
 
-import com.thonwelling.academiadigital.entity.Aluno;
 import com.thonwelling.academiadigital.entity.AvaliacaoFisica;
-import com.thonwelling.academiadigital.entity.dtos.AlunoDto;
-import com.thonwelling.academiadigital.entity.dtos.AlunoUpdateDto;
+import com.thonwelling.academiadigital.dtos.AlunoDto;
 
 import java.util.List;
 
 public interface IAlunoService {
 
-  Aluno create(AlunoDto form);
+  AlunoDto create(AlunoDto form);
 
-  Aluno get(Long id);
+  AlunoDto get(Long id);
 
-  List<Aluno> getAll();
+  List<AlunoDto> getAll();
 
-  Aluno update(Long id, AlunoUpdateDto formUpdate);
+  AlunoDto update(AlunoDto aluno);
 
   void delete(Long id);
 
